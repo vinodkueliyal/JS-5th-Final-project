@@ -1,0 +1,755 @@
+body{
+    font-family: "Montserrat", sans-serif;
+
+}
+html{
+    scroll-behavior: smooth;
+}
+.jscloth_header{
+margin-left: 60px;
+margin-bottom: 30px;
+margin-top: 30px;
+}
+*{
+    margin: 0;
+}
+#nav-bar{
+ z-index: 2;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    box-shadow: 2px 4px 2px rgb(17 16 16 / 50%);
+    padding: 15px 0;
+    /* min-height: 8vh; */
+    /* margin-top: -10px !important; */
+    margin-top: -50px;
+    position: fixed;
+    height: 40px;
+    /* z-index: 50; */
+    background-color: #fff;
+}
+#nav-bar .navcontent .logo{
+    font-size: 30px;
+    color:  #009688;
+    font-weight: 1000;
+}
+.logo2{
+    position: relative;
+    right: 5px;
+    font-size: 30px;
+    color: black;
+    
+}
+
+.navcontent1 span{
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin: 0 1.6vw;
+    color: black;
+    border-bottom: 1px solid white;
+
+ 
+}
+.anchor{
+    background-color: white;
+    color: black;
+    text-decoration: none;
+}
+a{
+    text-decoration: none;
+}
+.navcontent1{
+    justify-content: center;
+    align-items: center;
+    padding-top: 10px;
+}
+/* .navcontent{
+    
+} */
+
+.icons i {
+    padding-top: 8px;
+    font-size: 20px;
+    cursor: pointer;
+    margin-right: 50px;
+}
+.jsacc_header{
+    margin-left: 60px;
+margin-bottom: 30px;
+margin-top: 70px;
+}
+
+#main-div{
+    margin-top: 30px;
+}
+.clothingbox2{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+   
+    
+}
+/* #accesories_box{
+    margin-bottom: 100px;
+} */
+.accessoriesbox2{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 0;
+    padding-bottom: 0;
+   
+}
+.minibox{
+    margin-bottom: 60px;
+    margin-right: 10px;
+    margin-left: 10px;
+    width: 210px;
+    height: 413px;
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 2px 10px 0px;
+}   
+.minibox:hover{
+    box-shadow: rgba(0, 0, 0, 0.7) 0px 2px 10px 0px;
+
+}
+
+.imagediv{
+    width: 100%;
+    
+}
+.mainimage{
+    width: 100%;
+}
+.text1{
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+    color: rgb(27, 25, 25);
+    margin-top: 10px;
+    margin-bottom: 0;
+}
+.text2{
+    font-size: 12px;
+    font-weight: 700;
+    color: rgb(110, 110, 110);
+    margin-top: 10px;
+    margin-bottom: 0;
+}
+.text3{
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: rgb(0, 150, 136);
+    margin-top: 10px;
+}
+.dataodcard{
+    margin-left: 10px;
+}
+
+
+
+/* image slider start here */
+
+
+  .slider{
+    margin-top: 50px !important;
+    padding-top: 20px;
+    z-index: -1;
+    width: 100%;
+    /* height: 500px; */
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  
+  .slides{
+    width: 500%;
+    /* height: 500px; */
+    display: flex;
+  }
+  
+  .slides input{
+    display: none;
+  }
+  
+  .slide{
+    width: 20%;
+    transition: 0.5s;
+  }
+  
+  .slide img{
+    width: 100%;
+    /* height: 500px; */
+  }
+  
+  /*css for manual slide navigation*/
+  
+  .navigation-manual{
+    position: absolute;
+    width: 100%;
+    margin-top: 0.8vw;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .manual-btn{
+    border: 2px solid gray;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.5s;
+    opacity: 0.1;
+  }
+  
+  .manual-btn:not(:last-child){
+    margin-right: 40px;
+  }
+  
+  .manual-btn:hover{
+    background: gray;
+  }
+  
+  #radio1:checked ~ .first{
+    margin-left: 0;
+  }
+  
+  #radio2:checked ~ .first{
+    margin-left: -20%;
+  }
+  
+  #radio3:checked ~ .first{
+    margin-left: -40%;
+  }
+  
+  #radio4:checked ~ .first{
+    margin-left: -60%;
+  }
+  
+  /*css for automatic navigation*/
+  
+  .navigation-auto{
+    position: absolute;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    margin-top: 27vw;
+    
+  }
+  
+  .navigation-auto div{
+    border: 2px solid gray;
+    padding: 5px;
+    border-radius: 10px;
+    transition: 0.5s;
+    color: red;
+    font-size: 30px;
+    cursor: pointer;
+  }
+  
+  .navigation-auto div:not(:last-child){
+    margin-right: 40px;
+  }
+  
+  #radio1:checked ~ .navigation-auto .auto-btn1{
+    background: gray;
+    color: blue;
+    
+  }
+  
+  #radio2:checked ~ .navigation-auto .auto-btn2{
+    background: gray;
+  }
+  
+  #radio3:checked ~ .navigation-auto .auto-btn3{
+    background: gray;
+  }
+  
+  #radio4:checked ~ .navigation-auto .auto-btn4{
+    background: gray;
+  }
+    .slides input{
+        height: 20px;
+        width: 20px;
+    } 
+    .navigation-auto div{
+        height: -2px;
+    }
+
+
+
+/* image slider end here */
+
+/* FOOTER STARTS HERE */
+
+footer{
+    display: flex;
+    justify-content: space-around;
+    color: white;
+    background-color: black;
+    padding-bottom: 20px;
+    padding: 30px;
+    
+}
+footer p{
+    font-size: 12px;
+    color: #b8b8b8;
+    margin: 5px 0;
+}
+footer h4{
+    color: #dcdcdc;
+   
+    margin-bottom: 10px;
+}
+
+/* style for product page */
+
+/* product details page */
+
+#main-div2{
+
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    padding-top: 50px;
+
+}
+
+#image-div{
+    margin-bottom: 30px;
+    width: 31%;
+}
+
+#details-div{
+    margin-left: 30px;
+    width: 100%;
+    margin-bottom: auto;
+
+}
+.smallimages-wrapper{
+    display: flex;
+    
+
+}
+.smallimages{
+    width: 110px;
+    height: fit-content;
+    margin: 5px;
+    /* padding: 5px 5px 2px 5px; */
+    border: 2px solid white;
+    margin-top: 30px;
+  
+}
+
+.main-image-wrapper{
+    width: 100%;
+    
+}
+.smallphotos{
+    
+    border-radius: 6px;
+    width: 100%;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+.style2{
+    width: 100px;
+    border: 2px solid #009688;
+    border-radius: 6px;
+    padding: 5px 5px 2px 5px;
+
+}
+
+.para1{
+    font-weight: 300;
+    font-size: 44px;
+    letter-spacing: -2px;
+
+}
+.para2{
+    font-size: 20px;
+    font-weight: 200;
+    letter-spacing: 1px;
+    margin-top: 20px;
+}
+.para3{
+    margin-top: 20px;
+}
+.spanpara{
+    font-size: 20px;
+    font-weight: 200;
+    letter-spacing: 1px;
+
+
+}
+.spanpara2{
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: rgb(0, 150, 136);
+}
+.para4{
+    font-size: 20px;
+    font-weight: 200;
+    letter-spacing: 1px;
+    margin-top: 20px;
+}
+.para5{
+    margin-top: 20px;
+    font-size: 16px;
+    font-weight: 300;
+    color: rgb(134, 147, 158);
+}
+.para6{
+    font-size: 20px;
+    font-weight: 200;
+    letter-spacing: 1px;
+    margin-top: 20px;
+}
+.active{
+    border: 2px solid #009688;
+    padding: 5px;
+    width: 90%;
+}
+#addtocart button{
+    
+    font-size: 16px;
+
+    font-weight: bold;
+    color: #fff;
+    padding: 10px 20px;
+    letter-spacing: 2px;
+    background-color: #009688;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    box-shadow: 0 2px 10px rgb(0 0 0 / 50%);
+    font-family: "Montserrat", sans-serif;
+    
+}
+#addtocart{
+    display: block;
+  margin-left:40px;
+  margin-bottom: 30px;
+  margin-top: 2vw;
+}
+
+#second-main{
+    display: block;
+    margin-bottom: 50px;
+    width: 45%;
+}
+#card-maindiv{
+    width: 100%;
+    justify-content: space-around;
+    margin-top: 50px;
+    padding-top: 70px;
+    margin-bottom: 50px;
+}
+.second-main{
+    width: 50%;
+    display: flex;
+    margin-left: 5%;
+
+justify-content: center;
+flex-direction: column;
+}
+
+.second-main2{
+    width: 50%;
+    display: flex;
+    margin-left: 5%;
+
+justify-content: center;
+
+
+}
+#name-checkout{
+    font-weight: 300;
+    font-size: 40px;
+    letter-spacing: -2px;
+    margin-bottom: 50px;
+}
+#leftsifecheckout{
+    color: rgb(27, 25, 25);
+    letter-spacing: 1px;
+    font-size: 20px;
+}
+.indivial-items img{
+
+height: 110px;
+margin-right: 15px;
+}
+.indivial-items{
+    margin-top: 25px;
+    border-radius: 4px;
+    padding: 15px;
+    cursor: pointer;
+    box-shadow: 0 2px 10px rgb(0 0 0 / 40%);
+    width: 80%;
+}
+
+#totalamount{
+    width: 60%;
+    height: 150px;
+    margin-top: 150px;
+    border-radius: 4px;
+    padding: 15px;
+    cursor: pointer;
+    box-shadow: 0 2px 10px rgb(0 0 0 / 40%);
+}
+
+.disc-of-check h4{
+    font-size: 1.13em;
+}
+.disc-of-check p{
+  margin-top: 5px;
+}
+#totalamount h2{
+    font-weight: 200;
+    letter-spacing: 2px;
+}
+#totalamount p{
+    margin-top: 20px;
+    letter-spacing: 2px;
+}
+#totalamount p span{
+    font-size: 20px;
+    font-weight: bold;
+}
+#totalamount button{
+    
+    font-size: 16px;
+
+    font-weight: bold;
+    color: #fff;
+    padding: 10px 20px;
+    letter-spacing: 2px;
+    background-color: #009688;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    box-shadow: 0 2px 10px rgb(0 0 0 / 50%);
+    font-family: "Montserrat", sans-serif;
+    margin-top: 20px;
+}
+.remove-from-cart{
+    font-size: 16px;
+
+    font-weight: bold;
+    color: #fff;
+    padding: 10px 20px;
+    letter-spacing: 2px;
+    background-color: #009688;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    box-shadow: 0 2px 10px rgb(0 0 0 / 50%);
+    font-family: "Montserrat", sans-serif;
+    margin-top: -20px;
+}
+
+.removediv{
+    width: 100%;
+    display: flex;
+    justify-content: end;
+}
+.disc-of-check{
+    width: 100%;
+}
+.quantity{
+ 
+    margin: 0;
+}
+
+#order-placed{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    padding-top: 100px;
+}
+#order-placed img{
+    height: 300px;
+    margin-bottom: 30px;
+}
+#order-placed p{
+    margin-top:30px ;
+    margin-bottom: 30px;
+}
+#cart-count{
+    color: #fff;
+    background-color: #009688;
+    border-radius: 50%;
+    font-size: 14px;
+    padding: 5px 8px;
+    position: absolute;
+    top: 10;
+    font-family: "Montserrat", sans-serif;
+}
+.profileimg{
+    height: 60px;
+ position: absolute;
+ border-radius: 90%;
+ top: 5;
+ cursor: pointer;
+   
+}
+.edyodalogo{
+    position: fixed;
+    bottom: 20;
+    right: 20;
+    height: 50px;
+}
+#clothingbox22{
+    display: block;
+    margin-top: 0;
+    padding-top: 0;
+    padding-bottom: 60px;
+}
+#accesoriesbox22{
+    display: block;
+    margin-bottom: 90px;
+}
+
+
+@media only screen and (max-width:400px){
+
+
+    .minibox{
+        width: 150px;
+        height: 300px;
+        margin-bottom: 40px;
+       
+    }
+    .text1{
+        font-size: 11px;
+       
+    }
+    .text2{
+        font-size:8px ;
+    }
+    .text3{
+        font-size: 10px;
+    }
+    #accesories_box{
+        margin-bottom: 100px;
+    }
+    .dataodcard{
+        margin-left: 8px;
+    }
+    h2{
+        font-size: 20px;
+    }
+    .jscloth_header{
+        margin-left: 40px;
+  
+    }
+        
+    .jsacc_header{
+        margin-left: 40px;
+       
+    }
+    
+
+    .jscloth_header{
+        margin-left: 20px;
+  
+    }
+        
+    .jsacc_header{
+        margin-left: 20px;
+       
+    }
+   
+    #nav-bar .navcontent .logo{
+        font-size: 24px;
+        color:  #009688;
+        font-weight: 1000;
+        
+    }
+    .navcontent{
+        padding-top: 5px;
+    }
+    .logo2{
+        position: relative;
+        right: 5px;
+        font-size: 24px;
+        
+        
+    }
+    .navcontent1{
+        visibility: hidden;
+        position: absolute;
+    }
+    .icons i {
+        padding-top: 8px;
+        font-size: 20px;
+        cursor: pointer;
+        margin-right: 10px;
+    }
+    .icons {
+        margin-right:70px ;
+    }
+    .profileimg{
+     right: 12;
+    }
+    #main-div{
+        margin-top: 50px;
+    }
+    footer{
+        flex-direction: column;
+    }
+    #main-div2{
+        flex-direction: column;
+        margin-left: 0;
+        padding-left: 0;
+        align-items: initial;
+        padding-top: 20px;
+    }
+    .main-image-wrapper{
+        width: 100vw;
+       
+        
+        
+    }
+    #second-main{
+        
+        width: 90%;
+    }
+    #card-maindiv{
+        flex-direction: column;
+    }
+    .second-main{
+        width: 90%;
+    }
+    .indivial-items{
+        height: 125px;
+        width: 92%;
+    }
+    .removediv{
+        justify-content: flex-start;
+    }
+    .remove-from-cart{
+        margin: 0;
+    }
+    .second-main2{
+        padding: 0;
+        width: 100%;
+        justify-content: flex-start;
+        margin: 0;
+    }
+    #totalamount{
+       margin-top: 30px;
+        margin-left: 50;
+    }
+  
+}
